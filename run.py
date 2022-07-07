@@ -14,5 +14,5 @@ SHEET = GSPREAD_CLIENT.open('Library')
 sales = SHEET.worksheet('inventary')
 
 data = sales.get_all_values()
-print(data)
+print("hello word")
 
