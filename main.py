@@ -20,7 +20,8 @@ books = SHEET.worksheet('books')
 #open the internal sheet test
 # test = SHEET.worksheet('test')
 inventaryValues = inventary.get_all_values()
-cellBook = books.find("Atomic Habits")
+word= input()
+cellBook = books.find(word)
 row = cellBook.row
 col =cellBook.col
 newCol= col
