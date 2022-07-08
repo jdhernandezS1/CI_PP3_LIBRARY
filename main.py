@@ -24,23 +24,37 @@ def rentBook(books):
         row = cellBook.row
         col =cellBook.col
         newCol= col
-        newRow = row+6
+        newRow = row
         rented = int(books.cell(8, newCol).value)#Rented cell of the book
         stock = int(books.cell(9, newCol).value)#Stock cell of the book
         condition = stock-rented #the condition of the if store have to be more than avaiable or we not have dispnoibility
         if (condition>=1):
             val = rented+1
             books.update_cell(8, newCol, str(val))
-            print("The book was returned")
+            print("The book was Rented as well")
         else:
             print("we dont have more copies")
     else: 
         print("we dont have that book")
-
+#   Return Book to the library
 def returnBook(books):
     word = input("\n Please type the ISBN of the book: ") # the book to search
     cellBook = books.find(word) # cell of the book by isbn
-    print("The book was Returned")
+    if cellBook != None: #verify if we have it
+        row = cellBook.row  # # of the row where is the book 
+        col =cellBook.col    # # of the column where is the book  
+        rented = int(books.cell(8, col).value)#Rented cell of the book
+        stock = int(books.cell(9, row).value)#Stock cell of the book
+        condition = (stock!= stock-rented) #the condition of the if store have to be more than avaiable or we not have dispnoibility
+        if (condition) :
+            val = rented-1
+            books.update_cell(8, newCol, str(val))
+            print("The book was returned")
+        else:
+            print("All the copies of the book are in the store")
+
+
+        print("The book was Returned")
 
 
 inventaryValues = inventary.get_all_values()#get values of inventary 
