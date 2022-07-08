@@ -8,30 +8,38 @@ SCOPE = [
     "https://www.googleapis.com/auth/drive.file",
     "https://www.googleapis.com/auth/drive"
     ]
+# Initial declarations
 CREDS = Credentials.from_service_account_file('creds.json')#conect with the json file to google sheets
 SCOPED_CREDS =  CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-#open the document Library
 SHEET = GSPREAD_CLIENT.open('Library') 
-#open the internal sheet inventary
 inventary = SHEET.worksheet('inventary')
-#open the internal sheet books
 books = SHEET.worksheet('books')
-#open the internal sheet test
-# test = SHEET.worksheet('test')
-inventaryValues = inventary.get_all_values()
-word= input()
-cellBook = books.find(word)
-row = cellBook.row
-col =cellBook.col
-newCol= col
-newRow = row+6
-rented = int(books.cell(8, newCol).value)
-store = int(books.cell(9, newCol).value)
-condition = store-rented #the condition of the if store have to be more than avaiable or we not have dispnoibility
-if (condition>=1):
-    val = rented+1
-    books.update_cell(8, newCol, str(val))
-else:
-    print("we dont have more copies")
+#Rent book function
+# The argument is the sheet where is working
+def rentBook(books):
+    word= input("\n Please type the name of the book: ")#the book to search
+    cellBook = books.find(word)#cell of the book fint
+    if cellBook != None: #verify if we have it 
+        row = cellBook.row
+        col =cellBook.col
+        newCol= col
+        newRow = row+6
+        rented = int(books.cell(8, newCol).value)#Rented cell of the book
+        stock = int(books.cell(9, newCol).value)#Stock cell of the book
+        condition = stock-rented #the condition of the if store have to be more than avaiable or we not have dispnoibility
+        if (condition>=1):
+            val = rented+1
+            books.update_cell(8, newCol, str(val))
+            print("The book was returned")
+        else:
+            print("we dont have more copies")
+    else: 
+        print("we dont have that book")
 
+def returnBook():
+    print("The book was rented")
+
+
+inventaryValues = inventary.get_all_values()#get values of inventary 
+rentBook(books)
