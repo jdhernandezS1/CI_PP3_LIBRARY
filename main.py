@@ -37,8 +37,10 @@ def rentBook(books):
     else: 
         print("we dont have that book")
 
-def returnBook():
-    print("The book was rented")
+def returnBook(books):
+    word = input("\n Please type the ISBN of the book: ") # the book to search
+    cellBook = books.find(word) # cell of the book by isbn
+    print("The book was Returned")
 
 
 inventaryValues = inventary.get_all_values()#get values of inventary 
