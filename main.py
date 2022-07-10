@@ -1,4 +1,5 @@
 import gspread
+import datetime 
 #import pandas as pd
 from google.oauth2.service_account import Credentials 
 
@@ -14,9 +15,9 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('Library') 
 inventary = SHEET.worksheet('inventary')
 books = SHEET.worksheet('books')
-#Rent book function
+# Rent book function
 # The argument is the sheet where is working
-def rentBook(books):
+def rentBook(books,inventary):
     word= input("\n Please type the name of the book: ")#the book to search
     cellBook = books.find(word)#cell of the book fint
     if cellBook != None: #verify if we have it 
@@ -27,9 +28,22 @@ def rentBook(books):
         rented = int(books.cell(8, newCol).value)#Rented cell of the book
         stock = int(books.cell(9, newCol).value)#Stock cell of the book
         condition = stock-rented #the condition of the if store have to be more than avaiable or we not have dispnoibility
-        if (condition>=1):
+        if (condition>=1): # if we have books avaiable
             val = rented+1
-            books.update_cell(8, newCol, str(val))
+            # books.update_cell(8, newCol, str(val)) # write the book -1 stock 
+            code = (int(books.cell(10, newCol).value)*2)-1
+            x=1
+            client = inventary.cell(x,code).value#initial condition by while 
+            while client!= None :   # move in all rows still to empty row
+                x+=1
+                client = inventary.cell(x,code).value
+            name= input("\n Please type the name of the client: ")#the client who rent the book
+            clientName = inventary.cell(x,code).value
+            clientDate = (inventary.cell(x-1,code+1).value)
+            actualDate = datetime.datetime.now()
+
+            print(actualDate.month,actualDate.year )
+            # print(clientDate)
             print("The book was Rented as well")
         else:
             print("we dont have more copies")
@@ -57,4 +71,4 @@ def returnBook(books):
 
 
 inventaryValues = inventary.get_all_values()#get values of inventary 
-rentBook(books)
+rentBook(books,inventary)
