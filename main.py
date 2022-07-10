@@ -30,21 +30,28 @@ def rentBook(books,inventary):
         condition = stock-rented #the condition of the if store have to be more than avaiable or we not have dispnoibility
         if (condition>=1): # if we have books avaiable
             val = rented+1
-            # books.update_cell(8, newCol, str(val)) # write the book -1 stock 
             code = (int(books.cell(10, newCol).value)*2)-1
             x=1
             client = inventary.cell(x,code).value#initial condition by while 
             while client!= None :   # move in all rows still to empty row
                 x+=1
                 client = inventary.cell(x,code).value
-            name= input("\n Please type the name of the client: ")#the client who rent the book
-            clientName = inventary.cell(x,code).value
-            clientDate = (inventary.cell(x-1,code+1).value)
-            actualDate = datetime.datetime.now()
-
-            print(actualDate.month,actualDate.year )
-            # print(clientDate)
+            name = str(input("\n Please type the name of the client: "))#the client who rent the book
+            clientName = inventary.cell(x,code).value #client name
+            clientDate = (inventary.cell(x-1,code+1).value) #client Date of rent
+            clientDate.split("/") #divide in two the date
+            dayRented = clientDate[0]
+            monthRented = clientDate[1]
+            actualDate = datetime.datetime.now() #actual date
+            month = str(actualDate.month+2)
+            year = str(actualDate.year)
+            rentDate = (month + "/" + year)#new date rented
+            # print(rentDate)
+            print(clientDate,clientName)
             print("The book was Rented as well")
+            inventary.update_cell(x,code, name) # write the name of the client in google sheet
+            inventary.update_cell(x,code+1, rentDate)  # write the day of the client must return the book in google sheet
+            # books.update_cell(8, newCol, str(val)) # write the book -1 stock 
         else:
             print("we dont have more copies")
     else: 
