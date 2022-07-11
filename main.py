@@ -51,31 +51,53 @@ def rentBook(books,inventary):
             print("The book was Rented as well")
             inventary.update_cell(x,code, name) # write the name of the client in google sheet
             inventary.update_cell(x,code+1, rentDate)  # write the day of the client must return the book in google sheet
-            # books.update_cell(8, newCol, str(val)) # write the book -1 stock 
+            books.update_cell(8, newCol, str(val)) # write the book -1 stock 
         else:
             print("we dont have more copies")
     else: 
         print("we dont have that book")
 #   Return Book to the library
-def returnBook(books):
-    word = input("\n Please type the ISBN of the book: ") # the book to search
-    cellBook = books.find(word) # cell of the book by isbn
+def returnBook(books,inventary):
+    word = input("\n Please type the book Title: ") # the book to search
+    cellBook = inventary.find(word) # cell of the book 
+    cellStock = books.find(word) # cell of the book 
     if cellBook != None: #verify if we have it
         row = cellBook.row  # # of the row where is the book 
         col =cellBook.col    # # of the column where is the book  
-        rented = int(books.cell(8, col).value)#Rented cell of the book
-        stock = int(books.cell(9, row).value)#Stock cell of the book
-        condition = (stock!= stock-rented) #the condition of the if store have to be more than avaiable or we not have dispnoibility
-        if (condition) :
-            val = rented-1
-            books.update_cell(8, newCol, str(val))
-            print("The book was returned")
-        else:
-            print("All the copies of the book are in the store")
-
-
-        print("The book was Returned")
-
+        name = input("\n Please type the Name of the client: ") # the client who rented the book
+        x=2
+        rentClient = (inventary.cell(x, col).value)#pointer to different clients in the data base   
+        while name!=rentClient:
+            x+=1
+            rentClient = (inventary.cell(x, col).value)#pointer with client located in the data base   
+        
+        clientName = inventary.cell(x,col).value #client name
+        clientDate = (inventary.cell(x,col+1).value) #client Date of rent
+        clientDate = clientDate.split("/") #divide in two the date
+        monthLimit = int(clientDate[0])
+        yearLimit = int(clientDate[1])
+        actualDate = datetime.datetime.now() #actual date
+        month = int(actualDate.month+2)
+        year = int(actualDate.year)
+        if (monthLimit >= month and yearLimit >= year)or (yearLimit >= year) :# condition if the book is on correct date
+            phrase= "The Book was returned on time"
+        else :
+            phrase= "The client is not in time the tax of extra time is:"
+        if cellStock!=None: #verify if we have it
+            stockRow = cellStock.row  # # of the row where is the book 
+            stockCol = cellStock.col    # # of the column where is the book 
+            rented = int(books.cell(8, stockCol).value)#Rented cell of the book
+            stock = int(books.cell(9, stockCol).value)#Stock cell of the book
+            condition = (stock!= stock-rented) #the condition of the if store have to be more than avaiable or we not have dispnoibility        
+            if (condition) :
+                val = rented-1
+                # books.update_cell(8, newCol, str(val))
+                print(phrase)
+            else:
+                print("All the copies of the book are in the store")
+    else:
+        print("Sry but we dont have any book with that name.")
 
 inventaryValues = inventary.get_all_values()#get values of inventary 
-rentBook(books,inventary)
+# rentBook(books,inventary)
+returnBook(books,inventary)
