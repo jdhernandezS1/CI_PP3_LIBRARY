@@ -1,6 +1,7 @@
 import gspread
 import datetime 
-#import pandas as pd
+import PySimpleGUI as sg
+
 from google.oauth2.service_account import Credentials 
 
 SCOPE = [
@@ -101,3 +102,5 @@ def returnBook(books,inventary):
 inventaryValues = inventary.get_all_values()#get values of inventary 
 # rentBook(books,inventary)
 # returnBook(books,inventary)
+
+sg.Window(title="Hello World", layout=[[]], margins=(100, 50)).read()
