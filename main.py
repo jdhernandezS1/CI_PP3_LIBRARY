@@ -1,11 +1,7 @@
-import gspread
-import datetime 
-import sys
 # import PySimpleGUI as sg
-import sys
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
-from PyQt5.QtWidgets import *
+import gspread
+import datetime
+import Tkinter
 from google.oauth2.service_account import Credentials 
 
 SCOPE = [
@@ -106,24 +102,7 @@ def returnBook(books,inventary):
 inventaryValues = inventary.get_all_values()#get values of inventary 
 # rentBook(books,inventary)
 # returnBook(books,inventary)
-
 # sg.Window(title="Hello World", layout=[[]], margins=(100, 50)).read()
-class window(QWidget):
-   def __init__(self, parent = None):
-      super(window, self).__init__(parent)
-      self.resize(200,50)
-      self.setWindowTitle("PyQt5")
-      self.label = QLabel(self)
-      self.label.setText("Hello World")
-      font = QFont()
-      font.setFamily("Arial")
-      font.setPointSize(16)
-      self.label.setFont(font)
-      self.label.move(50,20)
-def main():
-   app = QApplication(sys.argv)
-   ex = window()
-   ex.show()
-   sys.exit(app.exec_())
-if __name__ == '__main__':
-   main()
+top = Tkinter.Tk()
+# Code to add widgets will go here...
+top.mainloop()
