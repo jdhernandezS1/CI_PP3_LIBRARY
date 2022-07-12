@@ -1,4 +1,4 @@
 gspread==5.4.0
-matplotlib==3.5.2
 protobuf==4.21.2
+PyQt5==5.15.7
 PySimpleGUI==4.60.1
