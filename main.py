@@ -1,7 +1,6 @@
 # import PySimpleGUI as sg
 import gspread
 import datetime
-import PySimpleGUI as sg
 from google.oauth2.service_account import Credentials 
 
 SCOPE = [
@@ -91,15 +90,32 @@ def returnBook(books,inventary):
             if (condition) :
                 val = rented-1
                 books.update_cell(8, stockCol, str(val))#add 1 value to the stock 
-                inventary.update_cell(x,col,"")#deleting the client of the data base
-                inventary.update_cell(x,col+1,"")#deleting the client of the data base
-                print(phrase)
+                if x>1: #MAKE SURE THAN WE DONT DELETE THE NAME OF BOOKS IN THE STOCK
+                    inventary.update_cell(x,col,"")#deleting the client of the data base
+                    inventary.update_cell(x,col+1,"")#deleting the client of the data base
+                    print(phrase)
             else:
                 print("All the copies of the book are in the store") #The stock is full 
     else:
         print("Sry but we dont have any book with that name.") # is not a book of the library
+# fin client function 
+def findClient(books,inventary):
+    client = input("\n Please type the Client Name:") # the Client to Find
+    cellClient = inventary.findall(client) # cell of the client 
+    if cellClient!=None:
+        print(f"The client {client} has rented:")
 
-inventaryValues = inventary.get_all_values()#get values of inventary 
+    for results in cellClient:
+        # print(results)
+        if results != None: #verify if we have it
+            row = results.row  # # of the row where is the book 
+            col =results.col    # # of the column where is the book  
+            clientName = inventary.cell(row,col).value #client name
+            clientDate = inventary.cell(row,col+1).value #client name
+            clientBook = inventary.cell(1,col).value #client name
+            print(f"Title: {clientBook}")
+            print(f"Date: {clientDate}")
+# inventaryValues = inventary.get_all_values()#get values of inventary 
 # rentBook(books,inventary)
 # returnBook(books,inventary)
-sg.Window(title="Hello World", layout=[[]], margins=(100, 50)).read()
+findClient(books,inventary)
