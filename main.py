@@ -1,6 +1,6 @@
 import gspread
 import datetime 
-import django.db.models.deletion as tk
+from django.db.models.deletion import tkinter
 import PySimpleGUI as sg
 
 from google.oauth2.service_account import Credentials 
