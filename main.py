@@ -1,7 +1,7 @@
 # import PySimpleGUI as sg
 import gspread
 import datetime
-import Tkinter
+import tkinter
 from google.oauth2.service_account import Credentials 
 
 SCOPE = [
