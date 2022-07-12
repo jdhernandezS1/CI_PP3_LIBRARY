@@ -1,6 +1,7 @@
 import gspread
 import datetime 
-from django.db.models.deletion import tkinter
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
 import PySimpleGUI as sg
 
 from google.oauth2.service_account import Credentials 
