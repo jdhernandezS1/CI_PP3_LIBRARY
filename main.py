@@ -102,20 +102,22 @@ def returnBook(books,inventary):
 def findClient(books,inventary):
     client = input("\n Please type the Client Name:") # the Client to Find
     cellClient = inventary.findall(client) # cell of the client 
-    if cellClient!=None:
+    if cellClient!=[]:
         print(f"The client {client} has rented:")
+        for results in cellClient:
+            # print(results)
+            if results != None: #verify if we have it
+                row = results.row  # # of the row where is the book 
+                col =results.col    # # of the column where is the book  
+                clientName = inventary.cell(row,col).value #client name
+                clientDate = inventary.cell(row,col+1).value #client name
+                clientBook = inventary.cell(1,col).value #client name
+                print(f"Title: {clientBook}")
+                print(f"Maximum Date: {clientDate}")
+    else:
+        print(f"The client {client} is not in the data base.\n Please make you sure the name was typed as well")
 
-    for results in cellClient:
-        # print(results)
-        if results != None: #verify if we have it
-            row = results.row  # # of the row where is the book 
-            col =results.col    # # of the column where is the book  
-            clientName = inventary.cell(row,col).value #client name
-            clientDate = inventary.cell(row,col+1).value #client name
-            clientBook = inventary.cell(1,col).value #client name
-            print(f"Title: {clientBook}")
-            print(f"Date: {clientDate}")
 # inventaryValues = inventary.get_all_values()#get values of inventary 
 # rentBook(books,inventary)
 # returnBook(books,inventary)
-findClient(books,inventary)
+# findClient(books,inventary)
