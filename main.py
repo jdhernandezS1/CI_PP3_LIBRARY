@@ -1,7 +1,6 @@
 # import PySimpleGUI as sg
 import gspread
 import datetime
-import tkinter
 import PySimpleGUI as sg
 from google.oauth2.service_account import Credentials 
 
