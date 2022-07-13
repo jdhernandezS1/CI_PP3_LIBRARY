@@ -1,4 +1,5 @@
 <body>
+    <h1>Hood Library</h1>
     <button onclick="window.location.reload()">Reload</button>
     <div id="terminal"></div>
 
@@ -8,7 +9,7 @@
             rows: 24
         });
         term.open(document.getElementById('terminal'));
-        term.writeln('Wellcome to the library');
+        term.writeln('Wellcome');
         term.writeln('');
 
         var ws = new WebSocket(location.protocol.replace('http', 'ws') + '//' + location.hostname + (location.port ? (
