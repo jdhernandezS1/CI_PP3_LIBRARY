@@ -120,4 +120,4 @@ def findClient(books,inventary):
 # inventaryValues = inventary.get_all_values()#get values of inventary 
 # rentBook(books,inventary)
 # returnBook(books,inventary)
-# findClient(books,inventary)
+findClient(books,inventary)
