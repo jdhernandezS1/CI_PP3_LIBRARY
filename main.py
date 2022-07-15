@@ -1,6 +1,7 @@
 # import PySimpleGUI as sg
 import gspread
 import datetime
+import os
 from google.oauth2.service_account import Credentials 
 
 SCOPE = [
@@ -117,7 +118,27 @@ def findClient(books,inventary):
     else:
         print(f"The client {client} is not in the data base.\n Please make you sure the name was typed as well")
 
+
+def clear_console():
+    os.system('clear')
+
+
 # inventaryValues = inventary.get_all_values()#get values of inventary 
 # rentBook(books,inventary)
 # returnBook(books,inventary)
-findClient(books,inventary)
+# findClient(books,inventary)
+clear_console()
+print("Wellcome to the library \nThe options are:")
+print("To rent a book type 1 and press enter ")
+print("To return a book type 2 and press enter ")
+option = input("To get client information type 3 and press enter ")
+
+if(option=="1"):
+    rentBook(books,inventary)
+elif(option=="2"):
+    returnBook(books,inventary)
+elif(option=="3"):
+    findClient(books,inventary)
+else:
+    print("Please enter a valid option")
+
