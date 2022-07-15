@@ -4,7 +4,25 @@
         <div id="terminal"></div>
         <button onclick="window.location.reload()">Reload</button>
     </div>
-
+    <footer>
+        <p class="footer">
+            © 2022 - HTML-CSS-JS ALL RIGHTS RESERVED.
+        </p>
+        <div id="footer" class="footer">
+            <!-- icons -->
+            <div>
+                <a href="https://github.com/jdhernandezS1/CI_PP3_LIBRARY" class="icon links" aria-label="go to Github repository" target="blank">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+            </div>
+            <!-- icons -->
+            <div>
+                <a href="https://www.linkedin.com/in/david-hern%C3%A1ndez-b3764b171/" class="icon links" aria-label="go to my linkedin profile" target="blank">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </footer>
     <script>
         var term = new Terminal({
             cols: 80,
@@ -28,3 +46,5 @@
         document.getElementsByClassName("xterm-helper-textarea")[0].focus();
     </script>
 </body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
