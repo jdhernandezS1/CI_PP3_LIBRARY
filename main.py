@@ -16,28 +16,42 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('Library') # library folder
 inventary = SHEET.worksheet('inventary') #inventary sheet
 books = SHEET.worksheet('books')# books sheet
-fs.clear_console()
-
-
-while True:        
-    fs.wellcomeMessage()
+cred = SHEET.worksheet('cred')# credentials sheet
+while True:
+    flag = False
+    fs.clear_console()
     print("\033[1;32;80m")
-    print("\n Please type an option and press enter:")
-    print("\n 1 To rent a book ")
-    print("\n 2 To return a book ")
-    option = input("\n 3 To get client information  \n\n Option :")
-    
-    if(option=="1"):
-        fs.clear_console()
-        fs.rentBook(books,inventary)
-    
-    elif(option=="2"):
-        fs.clear_console()
-        fs.returnBook(books,inventary)
-    
-    elif(option=="3"):
-        fs.clear_console()
-        fs.findClient(books,inventary)
-    
-    else:
-        print("Please enter a valid option")
+
+    try :
+        flag = fs.login(cred)
+    except:
+        print("exeption please try Reload the page")
+    while flag:   
+        fs.clear_console()     
+        fs.wellcomeMessage()
+        print("\033[1;32;80m")
+        print("\n Please type an option and press enter:")
+        print("\n 1 To rent a book ")
+        print("\n 2 To return a book ")
+        print("\n 3 To get client information")
+        option = input("\n 4 To log out \n\n Option :")
+        
+        if(option=="1"):
+            fs.clear_console()
+            fs.rentBook(books,inventary)
+        
+        elif(option=="2"):
+            fs.clear_console()
+            fs.returnBook(books,inventary)
+        
+        elif(option=="3"):
+            fs.clear_console()
+            fs.findClient(books,inventary)
+        elif(option=="4"):
+            print("Please Press Reload button to start again")
+            quit()
+        else:
+            print("Please enter a valid option")
+        input("Press enter to continue")
+
+    input("Press enter to continue")
