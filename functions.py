@@ -1,12 +1,34 @@
 import os
 import datetime
 
+def login(cred):
+    """
+    Validate the credentials
+    @param : cred is a reference to an object of type worksheet in gspread library
+    """
+    clear_console()
+    wellcomeMessage()
+    user = input("\n Please type the username: ")#the username
+    password = input("\n Please type the password: ")#the password
+    try:
+        userCell = cred.find("user")
+        row = userCell.row
+        col = userCell.col+1
+        usersys=(cred.cell(row,col).value)
+        passsys=(cred.cell(row+1,col).value)
+        if user == usersys and password == passsys:
+            return True
+        else:
+            print("The User or Password are not in the system")
+            return False
+    except:
+        print("Error please try again")
 
 def rentBook(books,inventary):
     """
     Rent book function Data base add a new client, data and delete one book of the stock
-    @param : books is an object referenced to object of type worksheet in gspread library
-    @param : inventary is an object referenced to object of type worksheet in gspread library
+    @param : books is a reference to an object of type worksheet in gspread library
+    @param : inventary is a reference to an object of type worksheet in gspread library
     """
     
     flag=True
@@ -77,8 +99,8 @@ def rentBook(books,inventary):
 def returnBook(books,inventary):
     """
     Rent book function Data base add a new client, data and delete one book of the stock
-    @param : books is an object referenced to object of type worksheet in gspread library
-    @param : inventary is an object referenced to object of type worksheet in gspread library
+    @param : books is a reference to an object of type worksheet in gspread library
+    @param : inventary is a reference to an object of type worksheet in gspread library
     """
     clear_console()
     wellcomeMessage()
@@ -150,8 +172,8 @@ def returnBook(books,inventary):
 def findClient(books,inventary):
     """
     find client function search a client in the data base and show the information to the
-    @param : books is an object referenced to object of type worksheet in gspread library
-    @param : inventary is an object referenced to object of type worksheet in gspread library
+    @param : books is a reference to an object of type worksheet in gspread library
+    @param : inventary is a reference to an object of type worksheet in gspread library
     """
     clear_console()
     try:
@@ -181,7 +203,11 @@ def findClient(books,inventary):
         clear_console()
         print("An exception occurred Please be sure than all was written as well") 
 
+
 def wellcomeMessage():
+    """
+    The function where is the Main Message
+    """
     print("\033[1;31;80m ")
     print("                 ░░░░░░░░░░░░░░░░░")
     print("                 ░█░█░███░███░██░░")
@@ -195,6 +221,8 @@ def wellcomeMessage():
     print("            ░▀▀░▀░░▀▀▀░▀░▀░▀░▀░▀░▀░░▀░░░")
     print("            ░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
     print("\033[1;33;80m ")
+
+
 def clear_console(): 
     """
     Clear the screen
