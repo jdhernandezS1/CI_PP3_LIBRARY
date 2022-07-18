@@ -22,7 +22,7 @@ footer {
     flex-direction: row;
     justify-content: space-evenly;
     /* background-color: #ff5a5a; */
-    background-image: url();
+    background-image: url("/assets/images/books_wallpaper.png");
 }
 
 .icon {
