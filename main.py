@@ -17,8 +17,11 @@ SHEET = GSPREAD_CLIENT.open('Library') # library folder
 inventary = SHEET.worksheet('inventary') #inventary sheet
 books = SHEET.worksheet('books')# books sheet
 fs.clear_console()
-print("\n Wellcome to the library")
+
+
 while True:        
+    fs.wellcomeMessage()
+    print("\033[1;32;80m")
     print("\n Please type an option and press enter:")
     print("\n 1 To rent a book ")
     print("\n 2 To return a book ")
