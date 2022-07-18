@@ -77,6 +77,7 @@ def returnBook(books,inventary):
     @param : inventary is an object referenced to object of type worksheet in gspread library
     """
     clear_console()
+    wellcomeMessage()
     word = input("\n Please type the book Title: ") # the book to search
     try:
         cellBook = inventary.find(word) # cell of the book 
@@ -85,6 +86,7 @@ def returnBook(books,inventary):
             row = cellBook.row  # # of the row where is the book 
             col =cellBook.col    # # of the column where is the book  
             clear_console()
+            wellcomeMessage()
             name = input("\n Please type the Name of the client: ") # the client who rented the book
             x=2
             rentClient = (inventary.cell(x, col).value)#pointer to different clients in the data base   
@@ -136,7 +138,8 @@ def returnBook(books,inventary):
             clear_console()
             print("Sry but we dont have any book with that name.") # is not a book of the library
     except:
-        print("An exception occurred") 
+        clear_console()
+        print("An exception occurred Please be sure than all was written as well") 
 
 
 def findClient(books,inventary):
@@ -147,6 +150,7 @@ def findClient(books,inventary):
     """
     clear_console()
     try:
+        wellcomeMessage()
         client = input("\n Please type the Client Name:") # the Client to Find
         cellClient = inventary.findall(client) # cell of the client 
         
@@ -171,7 +175,19 @@ def findClient(books,inventary):
     except:
         print("An exception occurred") 
 
+def wellcomeMessage():
+    print("\033[1;31;80m ")
+    print("                 ░░░░░░░░░░░░░░░░░")
+    print("                 ░█░█░███░███░██░░")
+    print("                 ░█▀█░█░█░█░█░█░█░")
+    print("                 ░▀░▀░▀▀▀░▀▀▀░▀▀░░")
+    print("                 ░░░░░░░░░░░░░░░░░")
 
+    print("            ░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
+    print("            ░█░░█░░█▀█░█▀█░█▀█░█▀█░█░█░░")
+    print("            ░█░░█░░█▀█░██░░█▀█░██░░░█░░░")
+    print("            ░▀▀░▀░░▀▀▀░▀░▀░▀░▀░▀░▀░░▀░░░")
+    print("            ░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
 
 def clear_console(): 
     """
