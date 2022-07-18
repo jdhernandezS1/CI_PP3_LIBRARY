@@ -11,12 +11,13 @@ def rentBook(books,inventary):
     
     flag=True
     while flag:
+        wellcomeMessage()
         word= input("\n Please type the name of the book: ")#the book to search
         if len(word)>6:
             flag=False
         else:
             clear_console()
-            print("The book name must have min 6 characters")
+            print("The book name must has min 6 characters")
     try:
         cellBook = books.find(word)#cell of the book fint
         
@@ -42,12 +43,14 @@ def rentBook(books,inventary):
                 y=True
                 
                 while y:
+                    clear_console()
+                    wellcomeMessage()
                     name = str(input("\n Please type the name of the client: "))#the client who rent the book
                     if len(name)>2:
                         y=False
                     else:
                         clear_console()
-                        print("The client name have to be more than 2 characters")
+                        print("The client name must be larger than 2 characters")
                 actualDate = datetime.datetime.now() #actual date
                 month = str(actualDate.month+2)
                 year = str(actualDate.year)
@@ -66,7 +69,8 @@ def rentBook(books,inventary):
             clear_console()
             print("we dont have that book")
     except:
-        print("An exception occurred") 
+        clear_console()
+        print("An exception occurred Please be sure than all was written as well") 
 
 
 #   Return Book to the library
@@ -128,6 +132,7 @@ def returnBook(books,inventary):
                     if x>1: #MAKE SURE THAN WE DONT DELETE THE NAME OF BOOKS IN THE STOCK
                         inventary.update_cell(x,col,"")#deleting the client of the data base
                         inventary.update_cell(x,col+1,"")#deleting the client of the data base
+                        clear_console()
                         print(phrase)
             
                 else:
@@ -173,7 +178,8 @@ def findClient(books,inventary):
         else:
             print(f"The client {client} is not in the data base.\n Please make you sure the name was typed as well")
     except:
-        print("An exception occurred") 
+        clear_console()
+        print("An exception occurred Please be sure than all was written as well") 
 
 def wellcomeMessage():
     print("\033[1;31;80m ")
@@ -188,7 +194,7 @@ def wellcomeMessage():
     print("            ░█░░█░░█▀█░██░░█▀█░██░░░█░░░")
     print("            ░▀▀░▀░░▀▀▀░▀░▀░▀░▀░▀░▀░░▀░░░")
     print("            ░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
-
+    print("\033[1;33;80m ")
 def clear_console(): 
     """
     Clear the screen
