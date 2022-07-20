@@ -27,6 +27,7 @@ def login(cred):
             return False
     except:
         print("Error please try again")
+    input("Press enter to continue")
 
 
 def rentBook(books, inventary):
@@ -277,3 +278,13 @@ def clear_console():
     Clear the screen
     """
     os.system('clear')
+
+
+def options():
+    print("\033[1;32;80m")
+    print("\n Please type an option and press enter:")
+    print("\n 1 To rent a book ")
+    print("\n 2 To return a book ")
+    print("\n 3 To get client information")
+    option = input("\n 4 To log out \n\n Option :")
+    return option
