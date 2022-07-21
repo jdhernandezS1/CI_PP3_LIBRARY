@@ -209,14 +209,14 @@ The page was made using a real-world business as a model(Library), having a refe
 An terminal interface where the staff can interactive with the program to do some tasks.
 - User stories covered: 
 
-![Terminal](./assets/images/feature_terminal.png)  
+![terminal](./assets/images/feature_terminal.png)  
 
 ### __Reload Button__
 
 Button with a Function to refresh the page and start again the terminal to fix some future issues.
 - User stories covered: 
 
-![name](./assets/images/name.png)  
+![button](./assets/images/feature_button.png)  
 
 ### __Footer__
 
@@ -224,7 +224,6 @@ The footer is a straightforward part the staff can know who was the developer of
 - User stories covered: 
 
 ![footer](./assets/images/feature_footer.png) 
-
 
 ## __Validation__
 
@@ -234,7 +233,7 @@ The Validator used was W3C Service to validate the HTML of the webpage,
 the entire project pass with no errors by use of some tools.
 
 <details><summary>Validation</summary>
-<img src="assets/images/Wave_validator.png">
+<img src="assets/images/w3validator.png">
 </details>
 
 ### __CSS Validation__
@@ -244,22 +243,19 @@ W3C's  determine key parts of what makes the World Wide Web activity.
 W3C was used to validate the CSS style of the whole page
 
 <details><summary>style.css</summary>
-<img src="assets/images/w3validator_css.png">
+<img src="assets/images/jigsaw_validator.png">
 </details>
 
-### __JS Validation__
 
-HintJs was used to validate the JS files, where the code was placed, the errors were rectified, and the actual unneeded variables were deleted. 
-The software detects too many functions like unused variables.
+### __P8P Validation___
 
-<details><summary>Car and difficulty selector JS</summary>
-<img src="assets/images/jshint_carselector.png">
+This validator is online PEP8 checker.
+
+<details><summary>Main Validation</summary>
+<img src="assets/images/p3p8_validator_main.png">
 </details>
-<details><summary>Contactus JS</summary>
-<img src="assets/images/jshint_contactus.png">
-</details>
-<details><summary>Game JS</summary>
-<img src="assets/images/jshint_game.png">
+<details><summary>Functions Validation</summary>
+<img src="assets/images/p3p8_validator_functions.png">
 </details>
 
 ### __Accessibility__
