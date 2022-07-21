@@ -9,19 +9,24 @@ SCOPE = [
     "https://www.googleapis.com/auth/drive.file",
     "https://www.googleapis.com/auth/drive"
     ]
-# Initial declarations
-CREDS = Credentials.from_service_account_file('creds.json')
-#  conect with the json file to google sheets
-SCOPED_CREDS = CREDS.with_scopes(SCOPE)
-GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-SHEET = GSPREAD_CLIENT.open('Library')
-# library folder
-inventary = SHEET.worksheet('inventary')
-# inventary sheet
-books = SHEET.worksheet('books')
-# books sheet
-cred = SHEET.worksheet('cred')
-# credentials sheet
+try:    
+    # Initial declarations
+    CREDS = Credentials.from_service_account_file('creds.json')
+    #  conect with the json file to google sheets
+    SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+    GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+    SHEET = GSPREAD_CLIENT.open('Library')
+    # library folder
+    inventary = SHEET.worksheet('inventary')
+    # inventary sheet
+    books = SHEET.worksheet('books')
+    # books sheet
+    cred = SHEET.worksheet('cred')
+    # credentials sheet
+except:
+    ("an error ocurred")
+    quit()
+
 while True:
     flag = False
     fs.clear_console()
@@ -48,7 +53,6 @@ while True:
             print("Please Press Reload button to start again")
             fs.clear_console()
             flag = False
-            # quit()
         else:
             print("Please enter a valid option")
         input("Press enter to continue")
