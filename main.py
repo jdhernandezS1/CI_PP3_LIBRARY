@@ -9,7 +9,7 @@ SCOPE = [
     "https://www.googleapis.com/auth/drive.file",
     "https://www.googleapis.com/auth/drive"
     ]
-try:    
+try:
     # Initial declarations
     CREDS = Credentials.from_service_account_file('creds.json')
     #  conect with the json file to google sheets
