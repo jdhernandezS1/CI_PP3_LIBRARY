@@ -211,63 +211,20 @@ An terminal interface where the staff can interactive with the program to do som
 
 ![Terminal](./assets/images/feature_terminal.png)  
 
-### __Difficulty level__
+### __Reload Button__
 
-Difficulty consist in: Easy is five ways of automobiles, and hard is ten. These ways were used to expand or contract the stages.
-- User stories covered: 13
+Button with a Function to refresh the page and start again the terminal to fix some future issues.
+- User stories covered: 
 
-![difficulty](./assets/images/feature_difficulty.png)  
-
-### __Play the game__
-
-This function was designed to resemble older games in which you just clicked "play" to begin the game.
-- User stories covered: 13
-
-![play](./assets/images/feature_play.png)  
+![name](./assets/images/name.png)  
 
 ### __Footer__
 
-The footer is a straightforward part where social networking connections are made with the website in an easy-to-understand manner.
-- User stories covered: 5
+The footer is a straightforward part the staff can know who was the developer of the sofware.
+- User stories covered: 
 
 ![footer](./assets/images/feature_footer.png) 
 
-### __Form__
-
-The form can be utilized by the user in a variety of ways, including sending feedback, reporting bugs, and sharing recommendations.
-- User stories covered: 9
-
-![form](./assets/images/feature_form.png) 
-
-### __Form Submit__
-
-The form submission modification was made to make the website more dynamic. The system changes the interface and displays a graphic to inform the user that the message has been sent.
-- User stories covered: 9
-
-![formSubmited](./assets/images/feature_formsent.png) 
-
-### __How to play__
-
-The instructions that describe the game's dynamics are included in this section.
-with a graphic showing each interactive element in the user interface and text explaining it.
-- User stories covered: 6
-
-![instructions](./assets/images/feature_instructions.png) 
-
-### __Game UI__
-
-A canvas with a background of the way is part of the game's user interface. Using CSS animation, it is animated to give the impression that it is moving.
-The player's EGO car and the other opponents' cars are the small components inside, and these divisions can be manipulated by JS by shifting their locations in the area.
-- User stories covered: 4,2
-
-![gameUI](./assets/images/feature_gameui.png) 
-
-### __Game controls__
-
-The controls consist of two straightforward arrows that attempt to replicate the joystick and three buttons found on older machines.
-- User stories covered: 3
-
-![controls](./assets/images/feature_controls.png) 
 
 ## __Validation__
 
@@ -276,20 +233,8 @@ The controls consist of two straightforward arrows that attempt to replicate the
 The Validator used was W3C Service to validate the HTML of the webpage, 
 the entire project pass with no errors by use of some tools.
 
-<details><summary>Home Validation</summary>
-<img src="assets/images/w3validator_home.png">
-</details>
-<details><summary>Game UI Validation</summary>
-<img src="assets/images/w3validator_game.png">
-</details>
-<details><summary>Contact Us Validation</summary>
-<img src="assets/images/w3validator_contactus.png">
-</details>
-<details><summary>Instructions Validation</summary>
-<img src="assets/images/w3validator_instructions.png">
-</details>
-<details><summary>404 Validation</summary>
-<img src="assets/images/w3validator_404.png">
+<details><summary>Validation</summary>
+<img src="assets/images/Wave_validator.png">
 </details>
 
 ### __CSS Validation__
@@ -321,40 +266,16 @@ The software detects too many functions like unused variables.
 
 The WAVE WebAIM web accessibility evaluation tool was used to ensure the website met high accessibility standards. All pages pass with 0 errors.
 
-<details><summary>Home accessibility</summary>
-<img src="assets/images/wave_home.png">
-</details>
-<details><summary>Game UI accessibility</summary>
-<img src="assets/images/wave_game.png">
-</details>
-<details><summary>Contact Us accessibility</summary>
-<img src="assets/images/wave_contactus.png">
-</details>
-<details><summary>Instructions accessibility</summary>
-<img src="assets/images/wave_instructions.png">
-</details>
-<details><summary>404 accessibility</summary>
-<img src="assets/images/wave_404.png">
+<details><summary>Validation</summary>
+<img src="assets/images/Wave_validator.png">
 </details>
 
 ### __Performance__
 
 Google Lighthouse's Chrome Developer Tool was used to test the website's performance.
 
-<details><summary>Home performance</summary>
-<img src="assets/images/lighthouse_home.png">
-</details>
-<details><summary>Game UI performance</summary>
-<img src="assets/images/lighthouse_game.png">
-</details>
-<details><summary>Contact Us performance</summary>
-<img src="assets/images/lighthouse_contactus.png">
-</details>
-<details><summary>Instructions performance</summary>
-<img src="assets/images/lighthouse_instructions.png">
-</details>
-<details><summary>404 performance</summary>
-<img src="assets/images/lighthouse_404.png">
+<details><summary>Validation</summary>
+<img src="assets/images/lighthouse_validator.png">
 </details>
 
 ### __Browsers support__
