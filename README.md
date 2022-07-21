@@ -199,24 +199,17 @@ The functions are made in 3 clear boxes that serve the following 3 purposes: ren
 - Googlesheets
 - Google Drive
 - Google Api
-
+- Pep8online
 ## __Features__
 
-The page was created and influenced by old-school user interface (UI) games, where colors were blended and changed periodically to try to give users a sense of being in an antiquated setting while using contemporary visuals.
+The page was made using a real-world business as a model(Library), having a reference to be operated by the staff. The goal was to manage the database as an item that could be read and changed.
 
-### __Navigation Bar__
+### __Terminal__
 
-Three HTML components make up the section. The first is the home page, where the user made the decision to play or read the content, the second is the contact us page, where the user can write us with their thoughts by email, and the third is the page with the instructions.
-- User stories covered: 11
+An terminal interface where the staff can interactive with the program to do some tasks.
+- User stories covered: 
 
-![navigationbar](./assets/images/feature_navbar.png)  
-
-### __Cars selector__
-
-Four different car styles made use of the car selector.
-- User stories covered: 13
-
-![cars style](./assets/images/feature_cars.png)  
+![Terminal](./assets/images/feature_terminal.png)  
 
 ### __Difficulty level__
 
