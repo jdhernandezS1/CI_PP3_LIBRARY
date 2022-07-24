@@ -281,171 +281,148 @@ Google Lighthouse's Chrome Developer Tool was used to test the website's perform
 | IE11, Edge| last 2 versions| last 2 versions| last 2 versions| last 2 versions
 
 ### __Testing user stories__
-
-
-1. Desires simple navigation.
+1. Wants easy operation.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|Navigation Bar | change pages| Fluid design | Works as well |
+|Actions are preceded by an instruction|Use options to guide the user| Order options| Works as well |
 
-<details><summary>Navigation Bar</summary>
-<img src="assets/images/feature_navbar.png">
+<details><summary>Console</summary>
+<img src="assets/images/testfeatures_1_easyop.png">
+
+<img src="assets/images/testfeatures_1_easyopmenu.png">
+
+<img src="assets/images/testfeatures_1_rentbk.png">
 </details>
 
-2. Is interested in playing.
+2. Has a desire to provide a service to customers.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|Atractive desing | Call the atention of the user| Animations | Works as well |
+|Offer diferent functions to the user|three options : return, rent book and get client information| Execute functions| Works as well |
 
-<details><summary>Home design</summary>
-<img src="assets/images/Testing_stories_play.png">
+<details><summary>Functions</summary>
+<img src="assets/images/testfeatures_2_easyop.png">
 </details>
 
-
-3. Desires to play a traditional game.
+3. Desires to assist a client with renting a book.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|Classic desing |Transport the player to the old environment game| Animation Background | Works as well |
+|Offer a function to the user|save a client in data base with a book rented | Data base changed| Works as well |
 
+<details><summary>Rent a book function</summary>
+<img src="assets/images/testfeatures_3_rentbok1.png">
+<img src="assets/images/testfeatures_3_rentbok2.png">
+<img src="assets/images/testfeatures_3_rentbok3.png">
+<img src="assets/images/testfeatures_3_rentbok4.png">
 
-<details><summary>Game design</summary>
-<img src="assets/images/Testing_stories_environment.png">
 </details>
 
-4. Desires to solicit comments or opinions.
+4. Wants access to credentials so they can secure the database.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|Form conected with email |Recibe the messages| Api jsemail | Works as well |
+|Sequirity when the staff is not supervising the machine|Credentials requested|Credential are mandatory to start | Works as well |
 
-
-<details><summary>Form JSEmail</summary>
-<img src="assets/images/Testing_stories_form.png">
+<details><summary>Credentials</summary>
+<img src="assets/images/testfeatures_4_credentials.png">
 </details>
 
-5. Is curious about social media.
+5. Media to get in touch with the developer.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|Social media links |Open the social media| open blank page with the link| Works as well |
+|Link to Professional profile|Open in a blank page|Open the correct link | Works as well |
 
-
-<details><summary>Social links</summary>
-<img src="assets/images/Testing_stories_social.png">
+<details><summary>Links</summary>
+<img src="assets/images/testfeatures_5_links.png">
+<img src="assets/images/testfeatures_5_links2.png">
 </details>
 
-6. Be familiar with the game's rules 
+
+6. Experience fluid interaction 
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|Instructions | Explain the rules| Images and text| Works as well |
+|Clean console |Every time the console is used, it is being cleaned|The console is always clear. | Works as well |
 
-
-<details><summary>Instructions</summary>
-<img src="assets/images/Testing_stories_instructions.png">
+<details><summary>Environment</summary>
+<img src="assets/images/testfeatures_6_carea.png">
 </details>
 
-7. be aware of the result and improve.
+7. Research details for a client.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|Report the score| Show the score at the end| New div appear on the screen| Works as well |
-
-
-<details><summary>Score</summary>
-<img src="assets/images/Testing_stories_score.png">
-</details>
-
-8. A website where you may unwind and play a simple game.
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|Simple UI | 3 button sections| Change conditions| Works as well |
-
-
-<details><summary>Simple UI</summary>
-<img src="assets/images/Testing_stories_simpleui.png">
-</details>
-
-9. Offer feedback or file bug reports.
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-| Form Title| Message to explain it to user| Message and colors| Works as well |
-
-
-<details><summary>Form message</summary>
-<img src="assets/images/Testing_stories_formmsj.png">
-</details>
-
-10. Locate the page's social media accounts.
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|Footer | Open links in blank page| links with social media | Works as well |
-
-
-<details><summary>Footer</summary>
-<img src="assets/images/Testing_stories_footer.png">
-</details>
-
-11. Use a website with a straightforward navigation bar.
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-| Navigation Bar wrapper| Put all items in a style| Wrap a List in one section| Works as well |
-
-
-<details><summary>Nav Bar</summary>
-<img src="assets/images/Testing_stories_navbar.png">
-</details>
-
-12. Participants who enjoy the game.
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|The Game |Dynamic game| Can move the car and can lose the game| Works as well |
-
-<details><summary>Game</summary>
-<img src="assets/images/Testing_stories_inplay.png">
-</details>
-
-13. A responsive and interactive page that is clear.
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-| Fit the page to different screens | Fit content and style| Change dynamic sizes| Works as well |
-
-<details><summary>Responsive PC</summary>
-<img src="assets/images/Testing_stories_responsivepc.png">
-</details>
-
-<details><summary>Responsive Phone</summary>
-<img src="assets/images/Testing_stories_responsiveph.png">
-</details>
-
-14. Simple method for contacting us and providing feedback.
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|Submit method to send the form | Submit| Recibe at email| Works as well |
-
-<details><summary>Emailjs</summary>
-<img src="assets/images/Testing_stories_emailjs.png">
-</details>
-
-15. Give the players a sense of being in a traditional setting.
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-| Almost all pictures are similar to classic games|Use pictures to decorate all| Images and text| Works as well |
+|Get client information |Read database and show ordered in the console | Information expected | Works as well |
 
 <details><summary>Environment</summary>
 <img src="assets/images/Testing_stories_envi.png">
 </details>
+
+
+8. Return a book to the stock from a client.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|Offer a function to the user|Get a client in data base calculate the tax| Data base changed| Works as well |
+
+<details><summary>Environment</summary>
+<img src="assets/images/Testing_stories_envi.png">
+</details>
+
+9. Reload the page to fix interface issues in the future.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|Refresh Button|Reload the program| Restart the console| Works as well |
+
+<details><summary>Environment</summary>
+<img src="assets/images/Testing_stories_envi.png">
+</details>
+
+10. controll database.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|Manipulate database remotely with the software|Add changes in database|New Data| Works as well |
+
+<details><summary>Environment</summary>
+<img src="assets/images/Testing_stories_envi.png">
+</details>
+
+11. Simple database manipulation
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|By software do the repetitive tasks |Modify database automatically | functions read and write in the database| Works as well |
+
+<details><summary>Environment</summary>
+<img src="assets/images/Testing_stories_envi.png">
+</details>
+
+12. An easy way to find the developer
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|Link to social media |Open in blank page | Open the decidered pages| Works as well |
+
+<details><summary>Environment</summary>
+<img src="assets/images/Testing_stories_envi.png">
+</details>
+
+13. Handling an interactive console.
+
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|Constantly changing console |Using colors and functions |Dynamic results | Works as well |
+
+<details><summary>Environment</summary>
+<img src="assets/images/Testing_stories_envi.png">
+</details>
+
 
 ## __Bugs__
 
