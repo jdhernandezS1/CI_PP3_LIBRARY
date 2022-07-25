@@ -312,11 +312,18 @@ Google Lighthouse's Chrome Developer Tool was used to test the website's perform
 |Offer a function to the user|save a client in data base with a book rented | Data base changed| Works as well |
 
 <details><summary>Rent a book function</summary>
+<details><summary>Step 1</summary>
 <img src="assets/images/testfeatures_3_rentbok1.png">
+</details>
+<details><summary>Step 2</summary>
 <img src="assets/images/testfeatures_3_rentbok2.png">
+</details>
+<details><summary>Step 3</summary>
 <img src="assets/images/testfeatures_3_rentbok3.png">
+</details>
+<details><summary>Step 4</summary>
 <img src="assets/images/testfeatures_3_rentbok4.png">
-
+</details>
 </details>
 
 4. Wants access to credentials so they can secure the database.
@@ -333,7 +340,7 @@ Google Lighthouse's Chrome Developer Tool was used to test the website's perform
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|Link to Professional profile|Open in a blank page|Open the correct link | Works as well |
+|Link to Professional profile|Open in a blank page|Open the Linkedin profile | Works as well |
 
 <details><summary>Links</summary>
 <img src="assets/images/testfeatures_5_links.png">
@@ -347,7 +354,7 @@ Google Lighthouse's Chrome Developer Tool was used to test the website's perform
 |-------------|------------|---------------------|-------------------|
 |Clean console |Every time the console is used, it is being cleaned|The console is always clear. | Works as well |
 
-<details><summary>Environment</summary>
+<details><summary>Clear Console </summary>
 <img src="assets/images/testfeatures_6_carea.png">
 </details>
 
@@ -357,8 +364,9 @@ Google Lighthouse's Chrome Developer Tool was used to test the website's perform
 |-------------|------------|---------------------|-------------------|
 |Get client information |Read database and show ordered in the console | Information expected | Works as well |
 
-<details><summary>Environment</summary>
-<img src="assets/images/Testing_stories_envi.png">
+<details><summary>Client information</summary>
+<img src="assets/images/testfeatures_7_consult.png">
+<img src="assets/images/testfeatures_7_consult2.png">
 </details>
 
 
@@ -368,8 +376,19 @@ Google Lighthouse's Chrome Developer Tool was used to test the website's perform
 |-------------|------------|---------------------|-------------------|
 |Offer a function to the user|Get a client in data base calculate the tax| Data base changed| Works as well |
 
-<details><summary>Environment</summary>
-<img src="assets/images/Testing_stories_envi.png">
+<details><summary>Return book</summary>
+<details><summary>Step1</summary>
+<img src="assets/images/testfeatures_8_return.png">
+</details>
+<details><summary>Step 2</summary>
+<img src="assets/images/testfeatures_8_return1.png">
+</details>
+<details><summary>Step 3</summary>
+<img src="assets/images/testfeatures_8_return2.png">
+</details>
+<details><summary>Step 4</summary>
+<img src="assets/images/testfeatures_8_return3.png">
+</details>
 </details>
 
 9. Reload the page to fix interface issues in the future.
@@ -378,18 +397,18 @@ Google Lighthouse's Chrome Developer Tool was used to test the website's perform
 |-------------|------------|---------------------|-------------------|
 |Refresh Button|Reload the program| Restart the console| Works as well |
 
-<details><summary>Environment</summary>
-<img src="assets/images/Testing_stories_envi.png">
+<details><summary>Reload Button</summary>
+<img src="assets/images/testfeatures_9_reloadbtn.png">
 </details>
 
 10. controll database.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|Manipulate database remotely with the software|Add changes in database|New Data| Works as well |
+|Manipulate database remotely with the software by an API|Add changes in database|New Data| Works as well |
 
-<details><summary>Environment</summary>
-<img src="assets/images/Testing_stories_envi.png">
+<details><summary>Google Sheet API</summary>
+<img src="assets/images/testfeatures_10_googleapi.png">
 </details>
 
 11. Simple database manipulation
@@ -398,18 +417,18 @@ Google Lighthouse's Chrome Developer Tool was used to test the website's perform
 |-------------|------------|---------------------|-------------------|
 |By software do the repetitive tasks |Modify database automatically | functions read and write in the database| Works as well |
 
-<details><summary>Environment</summary>
-<img src="assets/images/Testing_stories_envi.png">
+<details><summary>Automatic database history</summary>
+<img src="assets/images/testfeatures_11_databaseactivity.png">
 </details>
 
 12. An easy way to find the developer
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|Link to social media |Open in blank page | Open the decidered pages| Works as well |
+|Link to developer media |Open in blank page | Open the decidered pages| Works as well |
 
-<details><summary>Environment</summary>
-<img src="assets/images/Testing_stories_envi.png">
+<details><summary>Media links</summary>
+<img src="assets/images/testfeatures_12_medialinks.png">
 </details>
 
 13. Handling an interactive console.
@@ -419,8 +438,8 @@ Google Lighthouse's Chrome Developer Tool was used to test the website's perform
 |-------------|------------|---------------------|-------------------|
 |Constantly changing console |Using colors and functions |Dynamic results | Works as well |
 
-<details><summary>Environment</summary>
-<img src="assets/images/Testing_stories_envi.png">
+<details><summary>Interface Colors</summary>
+<img src="assets/images/testfeatures_13_colors.png">
 </details>
 
 
@@ -428,13 +447,9 @@ Google Lighthouse's Chrome Developer Tool was used to test the website's perform
 
 | **Bug** | **Fix** |
 | ----------- | ----------- |
-| Footer doesn't stay down | change position and HTML min size |
-| Contrast errors | was used animated colors to fix it |
-| Use different cars, they didn't appear | Set a default option|
-| Jshint detect function like unussed variables| Call them with event listener|
-## __Exeptions__
+| Tkinter library | change method was not possible fix it|
+| Styles sheet | all have to be include in html file |
 
-In Game.html was putted a script in the header for jsemail because, The mail doesn't work if the script is not in  there.
 
 ## __Deployment__
 
