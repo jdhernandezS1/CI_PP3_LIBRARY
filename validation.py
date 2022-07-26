@@ -22,7 +22,7 @@ books = SHEET.worksheet('books')
 cred = SHEET.worksheet('cred')
 
 
-def test_login(cred,user,password):
+def test_login(cred, user, password):
     """
     Validate the credentials
     @param : cred is a reference to an
