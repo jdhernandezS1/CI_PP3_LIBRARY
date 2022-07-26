@@ -1,5 +1,5 @@
 
-# __ CI_PP3_LIBRARY__
+# __CI_PP3_LIBRARY__
 
 
 Code institute Project portfolio 3 Library  ** CI_PP3_LIBRARY** is a website created specifically for library workers to use. where the staff can use a console application to access the database and make adjustments like rent, return a book for a client, and get the client's information.
@@ -20,8 +20,6 @@ CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaSc
 "Python" is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.
 Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly procedural), object-oriented and functional programming. It is often described as a "batteries included" language due to its comprehensive standard library.[[3](https://en.wikipedia.org/wiki/Python_(programming_language))]
 
-![bar](./assets/images/home.png)   
-
 
 [Live web page](https://ci-pp3-lib.herokuapp.com/)
 
@@ -31,7 +29,7 @@ Python is dynamically-typed and garbage-collected. It supports multiple programm
 1. [Project Goals](#project-goals)
     1. [User Goals](#user-goals)
     2. [Site Owner Goals](#site-owner-goals)
-2. [User Experience](#user-experience)
+2. [User Experience](#user-experience-uxd)
     1. [Target Audience](#target-audience)
     2. [User Requirements and Expectations](#user-requirements-and-expectations)
     3. [User Stories](#user-stories)
@@ -40,6 +38,7 @@ Python is dynamically-typed and garbage-collected. It supports multiple programm
     2. [Colour](#colour)
     3. [Fonts](#fonts)
     4. [Structure](#structure)
+    5. [Logical Design](#logical-design)
 4. [Technologies Used](#technologies-used)
     1. [Languages](#languages)
     2. [Frameworks Libraries Tools](#frameworks-libraries-tools)
@@ -47,22 +46,21 @@ Python is dynamically-typed and garbage-collected. It supports multiple programm
 6. [Testing](#validation)
     1. [HTML Validation](#html-validation)
     2. [CSS Validation](#css-validation)
-    3. [JS Validation](#js-validation)
+    3. [Python validation](#p8p-validation)
     4. [Accessibility](#accessibility)
     5. [Performance](#performance)
     6. [Browsers support](#browsers-support)
     7. [Testing user stories](#testing-user-stories)
 8. [Bugs](#bugs)
-9. [Exeptions](#exeptions)
-10. [Deployment](#deployment)
-    1. [JSemail api method](#jsemail-api-method)
-    2. [Share the code](#share-the-code)
-    3. [Fork the code](#fork-the-code)
-    4. [Clone the code](#clone-the-code)
-11. [Credits](#credits)
-12. [Contributing](#contributing)
-13. [License](#license)
-14. [Acknowledgements](#acknowledgements)
+9. [Deployment](#deployment)
+    1. [Clone the code](#clone-the-code)
+    2. [Fork the code](#fork-the-code)
+    3. [Heroku](#Heroku)
+    4. [Share the code](#share-the-code)
+10. [Credits](#credits)
+11. [Contributing](#contributing)
+12. [License](#license)
+13. [Acknowledgements](#acknowledgements)
 
 ## __Project Goals__
 
@@ -152,7 +150,7 @@ The website was composed of a page with:
 - The terminal's Refresh button 
 - Fotter with social media developer
 
-### Logical Design
+### __Logical Design__
 
 #### Flowchart
 
@@ -453,23 +451,7 @@ Google Lighthouse's Chrome Developer Tool was used to test the website's perform
 
 ## __Deployment__
 
-### JSEMAIL API method
-
-1. Open a profile at emailjs.com
-2. Add a new email service; the code will utilize the contact service ID
-3. Include a new email template; the code will use the contact form ID.
-4. In the integration dashboard, your user ID will be displayed.
-5. Make sure to load the EmailJS SDK in the head of your HTML code; otherwise, it won't work.
-6. In JavaScript, write a method that initializes the SDK with your ID and waits for submit events; depending on the version, this may change.
-
-### Share the code
-
-The steps for using GitHub Pages to deploy the website were as follows:
-
-1. On the GITHUB page's repository settings.
-2. On the menu under the Pages heading for code and automation.
-3. Select the primary branch in the source's selector..
-4. If everything that came before done so, you can see Your "link" has been published on your website..
+### Github
 
 ### Fork the code
 
@@ -488,15 +470,40 @@ To clone the repository:
 4. Go to the directory where you want to cloned the file.
 6. Use command Git clone and paste the URL.
 ```bash
-git clone https://github.com/jdhernandezS1/CI_PP2_CG.git
+git clone https://github.com/jdhernandezS1/CI_PP3_LIBRARY.git
 ```   
-Online view [link_to_page](https://jdhernandezs1.github.io/CI_PP2_CG/)
+Online view [link_to_page](https://ci-pp3-lib.herokuapp.com/)
+
+### Heroku
+### Deploy Application 
+
+1. Create an account in heroku.com.
+2. Make a new app, give it a distinctive name, and select your location.
+3. Go to Heroku aplication deployment.
+4. Select Deployment method GitHub.
+5. Conect it with GitHub repository.
+6. Go settings select  buildpacks. For the project 'python' and 'node.js'.
+7. Choose the branch at the end of deployment section.
+8. Await the app's construction. When everything is deployed, you will see the message "App was successfully deployed" and a "View" button that will lead you to your deployed link.
+
+### Share the code
+
+The steps for using GitHub Pages to deploy the website were as follows:
+
+1. On the GITHUB page's repository settings.
+2. On the menu under the Pages heading for code and automation.
+3. Select the primary branch in the source's selector..
+4. If everything that came before done so, you can see Your "link" has been published on your website..
+
 ## __Credits__
 
-- Google apis for fonts and maps : fonts.googleapis.com
+- Google APIS
 - icons source : https://ionic.io/ionicons
-- https://www.w3schools.com  
-- https://www.freepng.es
+- w3schools  
+- freepng.es
+- herokuapp
+- GitHub
+- This was the Code Institute student template for deploying portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
 
 ### __Media__
 Images Sources:
@@ -522,10 +529,13 @@ The softwares language and recomended IDE used to build the project.
 * [HTML](https://www.w3schools.com/html/)
 * [CSS](https://www.w3schools.com/css/default.asp)	
 * [JS](https://en.wikipedia.org/wiki/JavaScript)
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 * [visual studio code](https://visualstudio.microsoft.com/es/)
 * [Git](https://git-scm.com/)
 * [GitHub](https://github.com/)
-
+* [Heroku](https://www.heroku.com/)
+* [Github](https://github.com)
+* [Google](https://console.cloud.google.com)
 
 ## __Contributing__
 
@@ -535,18 +545,17 @@ Please read through our contributing guidelines, every pull request has been not
 - notes on development
 ## __License__
 
-- CI_PP2_CG is an open source project by [CI_PP2_CG](https://github.com/jdhernandezS1/CI_PP2_CG) that is licensed under [ops](https://opensource.org/).
-- CI_PP2_CG reserves the right to change the license of future releases.
+- CI_PP3_Library is an open source project by [CI_PP3_LIBRARY](https://github.com/jdhernandezS1/CI_PP3_LIBRARY) that is licensed under [ops](https://opensource.org/).
+- CI_PP3_Library reserves the right to change the license of future releases.
 
 ## __Acknowledgements__
 
 Cordially thanks to: 
 
 - HashEm to bless me.
-- My mentor Mo Shami for his support and Professional advices.
 - My Family to support me.
+- My mentor Mo Shami.
 - Guys of Stack overflow.
+- Code Institute Academy
 
-
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
 
