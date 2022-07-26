@@ -281,6 +281,9 @@ def clear_console():
 
 
 def options():
+    """
+    The Options on the main menu
+    """
     print("\033[1;32;80m")
     print("\n Please type an option and press enter:")
     print("\n 1 To rent a book ")
