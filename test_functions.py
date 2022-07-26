@@ -2,16 +2,17 @@ import unittest
 import functions as fs
 import validation as val
 
+
 class TestCred(unittest.TestCase):
     """
     Verification Credentials
     are working
     """
     def test_validate_credentials_True(self):
-        self.assertTrue(val.test_login(val.cred,"admin","admin"))
+        self.assertTrue(val.test_login(val.cred, "admin", "admin"))
 
     def test_validate_credentials_False(self):
-        self.assertFalse(val.test_login(val.cred,"test","test"))
+        self.assertFalse(val.test_login(val.cred, "test", "test"))
 
 
 class TestFuncs(unittest.TestCase):
@@ -24,7 +25,7 @@ class TestFuncs(unittest.TestCase):
 
     def test_return_book(self):
         self.assertNotIsInstance(fs.returnBook(val.books, val.inventary))
-        
+
     def test_find_client(self):
         self.assertNotIsInstance(fs.findClient(val.books, val.inventary))
 
@@ -36,4 +37,3 @@ class Test_wellcomeMessage(unittest.TestCase):
     """
     def test_message(self):
         self.assertNotIsInstance(fs.wellcomeMessage())
-        
