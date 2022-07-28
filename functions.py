@@ -300,22 +300,22 @@ def options():
     return option
 
 
-def addBook(books,cathegory, tittle, autor, editor, isbn, pages, stock):
+def addBook(books, cathegory, tittle, autor, editor, isbn, pages, stock):
     """
     Add book to the database
     """
     rented = 0
     flag = True
     col = 2
-    try: 
+    try:
         value = books.cell(2, col).value
         return True
     except:
         return False
-    
+
     while flag:
         value = books.cell(2, col).value
-        if value == None:
+        if value is None:
             flag = False
         else:
             col += 1
