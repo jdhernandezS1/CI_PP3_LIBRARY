@@ -190,7 +190,7 @@ def returnBook(books, inventary):
                     books.update_cell(8, stockCol, str(val))
                     # add 1 value to the stock
                     if x > 1:
-                        # MAKE SURE THAN WE DONT DELETE
+                        # MAKE SURE THAN WE DID DELETE
                         # THE NAME OF BOOKS IN THE STOCK
                         inventary.update_cell(x, col, "")
                         # deleting the client of the data base
@@ -198,17 +198,21 @@ def returnBook(books, inventary):
                         # deleting the client of the data base
                         clear_console()
                         print(phrase)
+                    return True
                 else:
                     clear_console()
                     print("All the copies of the book are in the store")
                     # The stock is full
+                return False
         else:
             clear_console()
             print("Sry but we dont have any book with that name.")
             # is not a book of the library
+            return False
     except:
         clear_console()
         print("Please be sure than all was written as well")
+        return False
 
 
 def findClient(books, inventary):
@@ -246,10 +250,13 @@ def findClient(books, inventary):
                     # client name
                     print(f"Title: {clientBook}")
                     print(f"Maximum Date: {clientDate}")
+                    return True
         else:
             print(f"The client {client} is not in the data base.")
             print("Please make you sure the name was typed as well")
+            return False
     except:
+        return False
         clear_console()
         print("Please be sure than all was written as well")
 
@@ -291,3 +298,34 @@ def options():
     print("\n 3 To get client information")
     option = input("\n 4 To log out \n\n Option :")
     return option
+
+
+def addBook(books,cathegory, tittle, autor, editor, isbn, pages, stock):
+    """
+    Add book to the database
+    """
+    rented = 0
+    flag = True
+    col = 2
+    try: 
+        value = books.cell(2, col).value
+        return True
+    except:
+        return False
+    
+    while flag:
+        value = books.cell(2, col).value
+        if value == None:
+            flag = False
+        else:
+            col += 1
+    books.update_cell(2, col, cathegory)
+    books.update_cell(3, col, tittle)
+    books.update_cell(4, col, autor)
+    books.update_cell(5, col, editor)
+    books.update_cell(6, col, isbn)
+    books.update_cell(7, col, pages)
+    books.update_cell(8, col, rented)
+    books.update_cell(9, col, stock)
+    books.update_cell(10, col, col+1)
+    return True
