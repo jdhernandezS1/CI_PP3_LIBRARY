@@ -3,6 +3,17 @@ import functions as fs
 import validation as val
 
 
+class TestAdd(unittest.TestCase):
+    """
+    Verification add book function
+    is working
+    """
+    def test_add_book_True(self):
+        self.assertTrue(fs.addBook(val.test_sheet, "cathegory", "tittle", "autor", "editor", "isbn", "pages", "stock"))
+    def test_add_book_False(self):
+        self.assertFalse(fs.addBook("sopa", "cathegory", "tittle", "autor", "editor", "isbn", "pages", "stock"))
+
+
 class TestCred(unittest.TestCase):
     """
     Verification Credentials
@@ -21,19 +32,10 @@ class TestFuncs(unittest.TestCase):
     are working
     """
     def test_rent_book(self):
-        self.assertNotIsInstance(fs.rentBook(val.books, val.inventary))
+        self.assertFalse(fs.rentBook(val.books, val.inventary))
 
     def test_return_book(self):
-        self.assertNotIsInstance(fs.returnBook(val.books, val.inventary))
+        self.assertFalse(fs.returnBook(val.books, val.inventary))
 
     def test_find_client(self):
-        self.assertNotIsInstance(fs.findClient(val.books, val.inventary))
-
-
-class Test_wellcomeMessage(unittest.TestCase):
-    """
-    Verification wellcome
-    message
-    """
-    def test_message(self):
-        self.assertNotIsInstance(fs.wellcomeMessage())
+        self.assertFalse(fs.findClient(val.books, val.inventary))
