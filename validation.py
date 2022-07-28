@@ -20,7 +20,8 @@ inventary = SHEET.worksheet('inventary')
 books = SHEET.worksheet('books')
 # books sheet
 cred = SHEET.worksheet('cred')
-test_sheet = SHEET.worksheet('test')
+tst = SHEET.worksheet('test')
+
 
 def test_login(cred, user, password):
     """
