@@ -248,13 +248,22 @@ W3C was used to validate the CSS style of the whole page
 ### __P8P Validation___
 
 This validator is online PEP8 checker.
+<details><summary>Validation </summary>
 
-<details><summary>Main Validation</summary>
+<details><summary>Main</summary>
 <img src="assets/images/p3p8_validator_main.png">
 </details>
-<details><summary>Functions Validation</summary>
+<details><summary>Functions</summary>
 <img src="assets/images/p3p8_validator_functions.png">
 </details>
+<details><summary>test Functions</summary>
+<img src="assets/images/p3p8_validator_test_functions.png">
+</details>
+<details><summary>validation</summary>
+<img src="assets/images/p3p8_validator_validation.png">
+</details>
+</details>
+
 
 ### __Accessibility__
 
