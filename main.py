@@ -23,6 +23,8 @@ try:
     # books sheet
     cred = SHEET.worksheet('cred')
     # credentials sheet
+    test = SHEET.worksheet('test')
+
 except:
     ("an error ocurred")
     quit()
@@ -50,6 +52,17 @@ while True:
             fs.clear_console()
             fs.findClient(books, inventary)
         elif(option == "4"):
+            fs.clear_console()
+            fs.wellcomeMessage()
+            cat = input("please instroduce the cathegory of the book : ")
+            tit = input("please instroduce the title of the book : ")
+            aut = input("please instroduce the author of the book : ")
+            ed = input("please instroduce the Editorial of the book : ")
+            ib = input("please instroduce the ISBN of the book : ")
+            pg = input("please instroduce the Pages of the book : ")
+            sk = input("please instroduce the Stock of the book : ")
+            fs.addBook(books, cat, tit, aut, ed, ib, pg, sk)
+        elif(option == "5"):
             print("Please Press Reload button to start again")
             fs.clear_console()
             flag = False
