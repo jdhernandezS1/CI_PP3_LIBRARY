@@ -85,6 +85,39 @@ Python is dynamically-typed and garbage-collected. It supports multiple programm
 ## __User Experience (UXD)__
 
 ### __User Manual__
+
+Welcome to the Hood Library User Interface. To get started, you must have the user/password, default credentials admin/admin.
+
+- You must enter your user name and password to log in remember pres enter after you type an instruction.
+
+- After logging in, using the software requires typing.
+
+<img src="assets/images/feature_terminal.png">
+
+- As stated in the user interface: 
+
+type 1 to rent a book
+type 2 to return a book 
+type 3 to get client information
+type 4 to add a new book to the stock
+type 5 to log out
+
+- Please double-check that everything you type in the database: client name, book name, ISBN, etc. -Is accurate.
+
+- Using lowercase letters will make it easier for clients with only one name and one second name to be found.
+
+- If you run into any issues or want to make sure everything was saved correctly. Here is a link to the [Data base](https://docs.google.com/spreadsheets/d/1DbyRwboTepMgfwkEzO9DnHFKomjpPq1epkJuvYWMPdY/edit#gid=1680754323)
+
+- To rent a book: You will need the client's name and the title of the book you wish to rent. By default, all books will be rented for two months. If a client returns a book before the end of the month or after the month has ended, they will be charged $20.
+
+- To rent a book: You will need the client's and book's name. The client will be automatically removed from the database, the software determines that the deadline for submitting the tax has passed or not and gives the tax value.
+
+- To get client information: The name of the client is necessary. The software will provide you with details regarding the books that the client has rented and the date.
+
+- To add Book: You need to give the software the full information about the book Category, Name, Author, ISBN, Pages, Stock. The software automaticaly add the new book to the database that can be confirmed in the database link [Data base](https://docs.google.com/spreadsheets/d/1DbyRwboTepMgfwkEzO9DnHFKomjpPq1epkJuvYWMPdY/edit#gid=1680754323)
+
+Every function and section has text to guide the user in the process this is a guide to how work with the software.
+
 ### __Target Audience__
 
 - Patrons of libraries.
@@ -156,12 +189,12 @@ The website was composed of a page with:
 - The terminal's Refresh button 
 - Fotter with social media developer
 
-### __Logical Design__
+### __Technical Design__
 
 #### Flowchart
 
-Flowchart consist in A black box that contains all functions is divided into 4 sections in the flowchart.
-The functions are made in 3 clear boxes that serve the following 3 purposes: rent book, return book, and client information.
+Flowchart consist in design A black box that contains all functions is divided into sections in the flowchart.
+The functions are made in clear boxes that serve the following the purposes: rent book, return book, client information and add book.
 
 
 <details><summary>Black Box</summary>
@@ -177,7 +210,9 @@ The functions are made in 3 clear boxes that serve the following 3 purposes: ren
 <details><summary>Get client information</summary>
     <img src="assets/images/TB_clientinfo.png">    
 </details>
-
+<details><summary>Add book</summary>
+    <img src="assets/images/TB_clientinfo.png">    
+</details>
 
 ## __Technologies Used__
 
