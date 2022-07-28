@@ -23,6 +23,8 @@ Python is dynamically-typed and garbage-collected. It supports multiple programm
 
 [Live web page](https://ci-pp3-lib.herokuapp.com/)
 
+[Data base link](https://docs.google.com/spreadsheets/d/1DbyRwboTepMgfwkEzO9DnHFKomjpPq1epkJuvYWMPdY/edit?usp=sharing)
+
 
 ## __Table of Content__
 
@@ -102,8 +104,8 @@ First time user:
 2. Has a desire to provide a service to customers.
 3. Desires to assist a client with renting a book.
 4. Wants access to credentials so they can secure the database.
-5. Media to get in touch with the creator.
-6. Experience fluid interaction 
+5. Add a book to the database.
+6. Experience fluid interaction.
 
 #### __Returning User__
 As a returning user, We want:
@@ -205,21 +207,22 @@ The page was made using a real-world business as a model(Library), having a refe
 ### __Terminal__
 
 An terminal interface where the staff can interactive with the program to do some tasks.
-- User stories covered: 
+- User stories covered: 1,2,3,5,6,7,8,10,11
 
 ![terminal](./assets/images/feature_terminal.png)  
+
 
 ### __Reload Button__
 
 Button with a Function to refresh the page and start again the terminal to fix some future issues.
-- User stories covered: 
+- User stories covered: 9 
 
 ![button](./assets/images/feature_button.png)  
 
 ### __Footer__
 
 The footer is a straightforward part the staff can know who was the developer of the sofware.
-- User stories covered: 
+- User stories covered: 12 
 
 ![footer](./assets/images/feature_footer.png) 
 
@@ -343,15 +346,15 @@ Google Lighthouse's Chrome Developer Tool was used to test the website's perform
 <img src="assets/images/testfeatures_4_credentials.png">
 </details>
 
-5. Media to get in touch with the developer.
+5. Add Book to the database.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|Link to Professional profile|Open in a blank page|Open the Linkedin profile | Works as well |
+|Add a book in the store automaticaly |Modify database |New data in google sheets | Works as well |
 
-<details><summary>Links</summary>
-<img src="assets/images/testfeatures_5_links.png">
-<img src="assets/images/testfeatures_5_links2.png">
+<details><summary>Add book</summary>
+<img src="assets/images/testfeatures_5_addbook.png">
+<img src="assets/images/testfeatures_5_database.png">
 </details>
 
 
@@ -482,6 +485,7 @@ To clone the repository:
 git clone https://github.com/jdhernandezS1/CI_PP3_LIBRARY.git
 ```   
 Online view [link_to_page](https://ci-pp3-lib.herokuapp.com/)
+
 
 ### Heroku
 ### Deploy Application 
