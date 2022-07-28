@@ -32,9 +32,10 @@ Python is dynamically-typed and garbage-collected. It supports multiple programm
     1. [User Goals](#user-goals)
     2. [Site Owner Goals](#site-owner-goals)
 2. [User Experience](#user-experience-uxd)
-    1. [Target Audience](#target-audience)
-    2. [User Requirements and Expectations](#user-requirements-and-expectations)
-    3. [User Stories](#user-stories)
+    1. [User Manual](#user-manual)
+    2. [Target Audience](#target-audience)
+    3. [User Requirements and Expectations](#user-requirements-and-expectations)
+    4. [User Stories](#user-stories)
 3. [Design](#design)
     1. [Design Choices](#design-choices)
     2. [Colour](#colour)
@@ -43,7 +44,7 @@ Python is dynamically-typed and garbage-collected. It supports multiple programm
     5. [Logical Design](#logical-design)
 4. [Technologies Used](#technologies-used)
     1. [Languages](#languages)
-    2. [Frameworks Libraries Tools](#frameworks-libraries-tools)
+    2. [Libraries, Frameworks and Tools](#libraries)
 5. [Features](#features)
 6. [Testing](#validation)
     1. [HTML Validation](#html-validation)
@@ -52,7 +53,9 @@ Python is dynamically-typed and garbage-collected. It supports multiple programm
     4. [Accessibility](#accessibility)
     5. [Performance](#performance)
     6. [Browsers support](#browsers-support)
-    7. [Testing user stories](#testing-user-stories)
+    7. [Testing](#testing)
+        - [Manual Test](#manual-test)
+        - [Automated test](#automated-test)
 8. [Bugs](#bugs)
 9. [Deployment](#deployment)
     1. [Clone the code](#clone-the-code)
@@ -81,6 +84,7 @@ Python is dynamically-typed and garbage-collected. It supports multiple programm
 
 ## __User Experience (UXD)__
 
+### __User Manual__
 ### __Target Audience__
 
 - Patrons of libraries.
@@ -184,22 +188,23 @@ The functions are made in 3 clear boxes that serve the following 3 purposes: ren
 - Java Script
 - Python
 
-### __Frameworks Libraries Tools__
+## __Libraries__
 
-- Visual Studio Code
-- Git
-- GitHub
-- Gitpod
-- Visme
-- Google Fonts
-- W3schools
-- Favicon.io
-- ion icons
-- Gspread
-- Googlesheets
-- Google Drive
-- Google Api
-- Pep8online
+### __Python Libraries__
+
+- os - To use clear console function
+- functions - python file to order the main code
+
+### __Third Party Libraries__
+
+- Gspread - JUSTIFICATION: In order to edit data in Google spreadsheet and to engage with Google APIs, Was used gspread.
+- Google.oauth2.service_account - JUSTIFICATION: Was used to set the access the Google API and link Service Account with the Credentials.
+
+### __Frameworks__
+
+- Unittest - To make automatic test to functions
+
+
 ## __Features__
 
 The page was made using a real-world business as a model(Library), having a reference to be operated by the staff. The goal was to manage the database as an item that could be read and changed.
@@ -289,8 +294,11 @@ Google Lighthouse's Chrome Developer Tool was used to test the website's perform
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Opera |
 | --------- | --------- | --------- | --------- | --------- |
 | IE11, Edge| last 2 versions| last 2 versions| last 2 versions| last 2 versions
+### __Testing__
+### __Manual Test__
 
-### __Testing user stories__
+<details><summary> Testing user stories </summary>
+
 1. Wants easy operation.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
@@ -451,7 +459,41 @@ Google Lighthouse's Chrome Developer Tool was used to test the website's perform
 <details><summary>Interface Colors</summary>
 <img src="assets/images/testfeatures_13_colors.png">
 </details>
+</details>
 
+### __Automated Test__
+<details><summary>Unittest</summary>
+
+* with unittest library Was written the methods to test the user functions 
+
+1. __Add book function__
+
+- To test this function, was maked a prove in where were given the paremeters and get an expected response
+
+<details><summary>AT add book</summary>
+<img src="assets/images/auto_test_1_add_console.png">
+<img src="assets/images/auto_test_1_add.png">
+</details>
+
+2. __Confirm credentials function__
+
+- The method was created to test this function, in which the predicted response was tested using both the correct and incorrect parameters.
+
+<details><summary>AT credentials</summary>
+<img src="assets/images/auto_test_2_creds.png">
+<img src="assets/images/auto_test_2_creds_console.png">
+</details
+
+3. __Add book function__
+
+- The method was created where the desired response could be verified in order to test those functions: customer information, rent, and return book.
+
+<details><summary>AT add book</summary>
+<img src=assets/images/auto_test_3_testfunc_console.png">
+<img src="assets/images/auto_test_3_testfunc.png">
+</details
+
+</details>
 
 ## __Bugs__
 
@@ -510,7 +552,7 @@ The steps for using GitHub Pages to deploy the website were as follows:
 
 ## __Credits__
 
-- Google APIS
++- Google APIS
 - icons source : https://ionic.io/ionicons
 - w3schools  
 - freepng.es
