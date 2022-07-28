@@ -296,7 +296,8 @@ def options():
     print("\n 1 To rent a book ")
     print("\n 2 To return a book ")
     print("\n 3 To get client information")
-    option = input("\n 4 To log out \n\n Option :")
+    print("\n 4 To Add book to the stock")
+    option = input("\n 5 To log out \n\n Option :")
     return option
 
 
@@ -308,9 +309,9 @@ def addBook(books, cathegory, tittle, autor, editor, isbn, pages, stock):
     flag = True
     col = 2
     try:
-        value = books.cell(2, col).value
-        return True
+        books.cell(2, 2).value
     except:
+        input(" an exeption ocurred")
         return False
 
     while flag:
@@ -319,6 +320,7 @@ def addBook(books, cathegory, tittle, autor, editor, isbn, pages, stock):
             flag = False
         else:
             col += 1
+
     books.update_cell(2, col, cathegory)
     books.update_cell(3, col, tittle)
     books.update_cell(4, col, autor)
