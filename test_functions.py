@@ -9,9 +9,10 @@ class TestAdd(unittest.TestCase):
     is working
     """
     def test_add_book_True(self):
-        self.assertTrue(fs.addBook(val.test_sheet, "cathegory", "tittle", "autor", "editor", "isbn", "pages", "stock"))
+        self.assertTrue(fs.addBook(val.tst, "c", "t", "a", "e", "i", "p", "s"))
+
     def test_add_book_False(self):
-        self.assertFalse(fs.addBook("sopa", "cathegory", "tittle", "autor", "editor", "isbn", "pages", "stock"))
+        self.assertFalse(fs.addBook("sopa", "c", "t", "a", "e", "i", "p", "s"))
 
 
 class TestCred(unittest.TestCase):
