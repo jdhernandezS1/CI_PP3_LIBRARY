@@ -41,7 +41,7 @@ Python is dynamically-typed and garbage-collected. It supports multiple programm
     2. [Colour](#colour)
     3. [Fonts](#fonts)
     4. [Structure](#structure)
-    5. [Logical Design](#logical-design)
+    5. [Technical Design](#technical-design)
 4. [Technologies Used](#technologies-used)
     1. [Languages](#languages)
     2. [Libraries, Frameworks and Tools](#libraries)
@@ -211,7 +211,7 @@ The functions are made in clear boxes that serve the following the purposes: ren
     <img src="assets/images/TB_clientinfo.png">    
 </details>
 <details><summary>Add book</summary>
-    <img src="assets/images/TB_clientinfo.png">    
+    <img src="assets/images/TB_addbook.png">    
 </details>
 
 ## __Technologies Used__
