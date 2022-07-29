@@ -1,8 +1,13 @@
-# import PySimpleGUI as sg
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 import gspread
+from google.oauth2.service_account import Credentials
+
+# Internal:
 import os
 import functions as fs
-from google.oauth2.service_account import Credentials
+
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -16,13 +21,9 @@ try:
     SCOPED_CREDS = CREDS.with_scopes(SCOPE)
     GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
     SHEET = GSPREAD_CLIENT.open('Library')
-    # library folder
     inventary = SHEET.worksheet('inventary')
-    # inventary sheet
     books = SHEET.worksheet('books')
-    # books sheet
     cred = SHEET.worksheet('cred')
-    # credentials sheet
     test = SHEET.worksheet('test')
 
 except:
