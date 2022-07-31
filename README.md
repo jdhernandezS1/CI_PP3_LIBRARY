@@ -18,7 +18,7 @@ CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaSc
 
 - Python 
 "Python" is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.
-Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly procedural), object-oriented and functional programming. It is often described as a "batteries included" language due to its comprehensive standard library.[[3](https://en.wikipedia.org/wiki/Python_(programming_language))]
+Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly procedural), object-oriented and functional programming. It is often described as a "batteries included" language due to its comprehensive standard library.[[4](https://en.wikipedia.org/wiki/Python_(programming_language))]
 
 
 [Live web page](https://ci-pp3-lib.herokuapp.com/)
@@ -27,6 +27,7 @@ Python is dynamically-typed and garbage-collected. It supports multiple programm
 
 
 ## __Table of Content__
+
 
 1. [Project Goals](#project-goals)
     1. [User Goals](#user-goals)
@@ -229,7 +230,7 @@ The functions are made in clear boxes that serve the following the purposes: ren
 
 - os - To use clear console function
 - functions - python file to order the main code
-
+- datetime -  To use the date inputs
 ### __Third Party Libraries__
 
 - Gspread - JUSTIFICATION: In order to edit data in Google spreadsheet and to engage with Google APIs, Was used gspread.
