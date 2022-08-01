@@ -518,14 +518,14 @@ Google Lighthouse's Chrome Developer Tool was used to test the website's perform
 <details><summary>AT credentials</summary>
 <img src="assets/images/auto_test_2_creds.png">
 <img src="assets/images/auto_test_2_creds_console.png">
-</details
+</details>
 
 3. __Add book function__
 
 - The method was created where the desired response could be verified in order to test those functions: customer information, rent, and return book.
 
 <details><summary>AT add book</summary>
-<img src=assets/images/auto_test_3_testfunc_console.png">
+<img src="assets/images/auto_test_3_testfunc_console.png">
 <img src="assets/images/auto_test_3_testfunc.png">
 </details
 
@@ -569,13 +569,24 @@ Online view [link_to_page](https://ci-pp3-lib.herokuapp.com/)
 ### Deploy Application 
 
 1. Create an account in heroku.com.
+
 2. Make a new app, give it a distinctive name, and select your location.
+
+    - <details><summary>Create App</summary> <img src="assets/images/dep_1crApp.png"> </details>
+    - <details><summary>Create App</summary> <img src="assets/images/dep_2crApp2.png"> </details>
+
 3. Go to Heroku aplication deployment.
 4. Select Deployment method GitHub.
+    - <details><summary>Git hub</summary> <img src="assets/images/dep_3github.png"> </details>
 5. Conect it with GitHub repository.
+    - <details><summary>Connected git hub</summary> <img src="assets/images/dep_4gitconected.png"> </details>
 6. Go settings select  buildpacks. For the project 'python' and 'node.js'.
+    - <details><summary>Buildpacks</summary> <img src="assets/images/dep_5buildpacks.png"> </details>
 7. Choose the branch at the end of deployment section.
+
+
 8. Await the app's construction. When everything is deployed, you will see the message "App was successfully deployed" and a "View" button that will lead you to your deployed link.
+    - <details><summary>Deploy branch</summary> <img src="assets/images/dep_6deploy.png"> </details>
 
 ### Share the code
 
