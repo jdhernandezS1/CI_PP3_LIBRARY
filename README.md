@@ -527,7 +527,7 @@ Google Lighthouse's Chrome Developer Tool was used to test the website's perform
 <details><summary>AT add book</summary>
 <img src="assets/images/auto_test_3_testfunc_console.png">
 <img src="assets/images/auto_test_3_testfunc.png">
-</details
+</details>
 
 </details>
 
