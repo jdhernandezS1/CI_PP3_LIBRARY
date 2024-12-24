@@ -4,7 +4,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "setup": "python -m venv venv && venv/bin/activate && pip install -r requirements.txt && yarn"
+    "setup": "python -m venv venv && . venv/bin/activate && pip install -r requirements.txt && yarn"
 
   },
   "repository": {
